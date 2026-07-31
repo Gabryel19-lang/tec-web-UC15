@@ -1,41 +1,326 @@
-/*Resete do Navegador */
-
-*{
+/* Remove os espaços automáticos do navegador */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* configuração gerais */
+/* Rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
 
+/* Configuração geral da página */
 body {
-    font-family: "Segoe UI", Tahoma, Genova, ver
-    line-height: 1.0
-    color: red;
-    background-color: white;
-
     min-height: 100vh;
 
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #202020;
+
+    background-color: #dcecff;
+    background-image: linear-gradient(
+        to bottom,
+        #dcecff,
+        #f5f9ff
+    );
 }
 
-*{
-    color: rgba(12, 6, 1, 0.959);
-    text-decoration: none;
-    transition: 0.1s;
-    font-size: 40px;
-    font-weight: 500;
-}
-a:hover {
-    color: green;
-    font-size: 30px;
-    font-weight: 500;
-}
-
+/* Menu principal */
 nav {
-    border: 2px red;
-    backdrop-filter: blur(8px);
     position: sticky;
-    top: 0px;
-    box-shadow: 0 3px 15px rgb(0, 0, 0, 0.25);
-    padding: 15px 0 15px 10px;
+    top: 0;
+    z-index: 1000;
+
+    padding: 20px;
+
+    background-color: #061a40;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Lista do menu */
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+    list-style: none;
+}
+
+/* Links do menu */
+nav a {
+    position: relative;
+
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+/* Linha animada embaixo do link */
+nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 3px;
+
+    background-color: #38bdf8;
+
+    transition: 0.3s;
+}
+
+/* Efeito ao passar o mouse no menu */
+nav a:hover {
+    color: #7dd3fc;
+}
+
+/* A linha aparece quando passa o mouse */
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Página atual do menu */
+nav a.ativo {
+    color: #facc15;
+}
+
+/* Área principal */
+main {
+    width: 90%;
+    max-width: 900px;
+
+    margin: 40px auto;
+    padding: 35px;
+
+    background-color: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+
+    animation: aparecer 0.6s ease;
+}
+
+/* Animação ao abrir a página */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Título principal */
+h1 {
+    margin-bottom: 25px;
+
+    color: #061a40;
+    font-size: 36px;
+    text-align: center;
+}
+
+/* Subtítulos */
+h2 {
+    margin-top: 35px;
+    margin-bottom: 15px;
+
+    color: #0066cc;
+    font-size: 26px;
+}
+
+/* Parágrafos */
+p {
+    margin-bottom: 20px;
+
+    font-size: 18px;
+    text-align: justify;
+}
+
+/* Imagem principal da Home */
+main > img:not(.imagem-personagem) {
+    display: block;
+
+    width: 100%;
+    max-width: 550px;
+
+    margin: 25px auto;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.25);
+
+    transition: 0.3s;
+}
+
+/* Efeito na imagem da Home */
+main > img:not(.imagem-personagem):hover {
+    transform: scale(1.03);
+}
+
+/* Imagens dos personagens */
+.imagem-personagem {
+    display: block;
+
+    width: 320px;
+    max-width: 100%;
+    height: 320px;
+
+    margin: 15px auto 25px;
+
+    object-fit: contain;
+
+    background-color: #eef6ff;
+
+    border: 3px solid #0066cc;
+    border-radius: 15px;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s;
+}
+
+/* Efeito ao passar o mouse nas imagens */
+.imagem-personagem:hover {
+    transform: scale(1.05);
+
+    border-color: #00aaff;
+
+    box-shadow:
+        0 10px 25px rgba(0, 102, 204, 0.35);
+}
+
+/* Caixa interativa de personagem */
+.personagem {
+    margin-bottom: 20px;
+    padding: 20px;
+
+    background-color: #eef6ff;
+
+    border-left: 6px solid #0066cc;
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+/* Efeito na caixa */
+.personagem:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 7px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Nome clicável do personagem */
+.personagem summary {
+    color: #061a40;
+    font-size: 24px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* Efeito no nome clicável */
+.personagem summary:hover {
+    color: #0066cc;
+}
+
+/* Caixa quando estiver aberta */
+.personagem[open] {
+    background-color: white;
+    border-left-color: #00aaff;
+}
+
+/* Botão para voltar */
+.botao {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 12px 24px;
+
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+
+    background-color: #061a40;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s;
+}
+
+/* Efeito no botão */
+.botao:hover {
+    background-color: #0066cc;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 7px 15px rgba(0, 102, 204, 0.35);
+}
+
+/* Cor ao selecionar um texto */
+::selection {
+    color: white;
+    background-color: #0066cc;
+}
+
+/* Adaptação para celular */
+@media (max-width: 650px) {
+    nav {
+        padding: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    main {
+        width: 94%;
+        margin: 20px auto;
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    p {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .imagem-personagem {
+        width: 100%;
+        height: 280px;
+    }
 }
