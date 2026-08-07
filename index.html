@@ -1,58 +1,129 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="style.css">
-
-    <title>Blue Lock</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site sobre Blue Lock: história, personagens e habilidades.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <title>Blue Lock | Home</title>
 </head>
-
 <body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
-    <nav>
+  <header class="site-header">
+    <div class="nav-container">
+      <a class="logo" href="index.html">BLUE <span>LOCK</span></a>
+
+      <nav aria-label="Navegação principal">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="historia.html">História</a></li>
-            <li><a href="personagens.html">Personagens</a></li>
-            <li><a href="habilidades.html">Habilidades</a></li>
+          <li><a class="ativo" aria-current="page" href="index.html">Página principal</a></li>
+          <li><a href="historia.html">História</a></li>
+          <li><a href="personagens.html">Personagens</a></li>
+          <li><a href="habilidades.html">Habilidades</a></li>
         </ul>
-    </nav>
+      </nav>
+    </div>
+  </header>
 
-    <main>
+  <main id="conteudo">
+    <section class="hero">
+      <div>
+        <span class="badge">Anime</span>
         <h1>Falando sobre Blue Lock</h1>
-
-        <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-RBJMVJUTE-S5RpXZlqoy-_N1TvMhyH2B3D4fuolu9w&s=10"
-            alt="Imagem do anime Blue Lock"
-        >
-
-        <h2>O que Blue Lock tem de interessante?</h2>
-
         <p>
-            Blue Lock é um anime de futebol diferente de tudo que estamos acostumados a ver. Em vez de focar apenas em amizade, trabalho em equipe e superação tradicional, a obra coloca o futebol como uma verdadeira guerra de ego, talento e sobrevivência.
-
-A história acompanha jovens atacantes do Japão que entram em um projeto extremo chamado Blue Lock, criado para formar o melhor atacante do mundo. Dentro desse ambiente, cada jogador precisa descobrir sua própria “arma”, evoluir constantemente e provar que merece continuar no campo.
-
-O que mais chama atenção em Blue Lock é sua filosofia. O anime mostra que, para ser um grande atacante, não basta ser obediente ou jogar apenas pelo time. É preciso ter ambição, coragem para decidir partidas e fome de ser o protagonista. Essa ideia transforma cada jogo em uma batalha psicológica intensa.
-
-Cada personagem possui um estilo único. Alguns se destacam pela velocidade, outros pelo drible, pela força, pela inteligência, pelo controle de bola ou pela finalização. Isso faz com que as partidas pareçam confrontos entre habilidades especiais, quase como em um anime de batalha.
-
-Além disso, Blue Lock trabalha muito bem as rivalidades. Os jogadores não querem apenas vencer partidas; eles querem superar uns aos outros, destruir limites e provar que são os melhores. Cada gol, passe ou jogada importante carrega uma disputa de ego e identidade.
-
-O visual do anime também é um dos seus grandes destaques. As auras, os olhos intensos, as cenas de impacto e as metáforas visuais fazem o futebol parecer uma batalha épica. A cada evolução, os personagens parecem despertar uma nova versão de si mesmos.
-
-No fim, Blue Lock é interessante porque transforma o futebol em algo mais profundo e agressivo. Não é apenas sobre ganhar um jogo. É sobre descobrir quem você é dentro de campo, qual é a sua arma e até onde você está disposto a ir para se tornar o melhor.
+          Um projeto radical criado para encontrar um atacante capaz de decidir partidas,
+          superar rivais e buscar o topo do futebol mundial.
         </p>
 
-        <p>
-            O objetivo do projeto Blue Lock é criar o melhor atacante
-            do mundo. Para isso, os jogadores precisam desenvolver
-            suas habilidades, seu ego e sua capacidade de marcar gols.
-        </p>
-    </main>
+        <div class="cta-row">
+          <a class="botao" href="historia.html">Conhecer a história</a>
+          <a class="botao secundario" href="personagens.html">Ver personagens</a>
+        </div>
+      </div>
 
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-RBJMVJUTE-S5RpXZlqoy-_N1TvMhyH2B3D4fuolu9w&s=10"
+        alt="Personagens do anime Blue Lock"
+      >
+    </section>
+
+    <section class="content-card">
+      <div class="page-heading">
+        <h2>O que torna Blue Lock interessante?</h2>
+        <p>Futebol apresentado como uma disputa de ego, estratégia, identidade e evolução.</p>
+      </div>
+
+      <p>
+        Blue Lock é um anime de futebol diferente de muitas histórias esportivas tradicionais.
+        Em vez de focar somente em amizade e trabalho em equipe, a obra coloca o futebol como
+        uma disputa intensa de talento, adaptação e sobrevivência.
+      </p>
+
+      <p>
+        A história acompanha jovens atacantes do Japão que entram em um projeto extremo chamado
+        Blue Lock. Cada jogador precisa descobrir sua própria “arma”, evoluir constantemente e
+        provar que merece continuar no campo.
+      </p>
+
+      <div class="section-grid">
+        <article class="feature-card">
+          <h2>⚽ Ego</h2>
+          <p>Os jogadores precisam assumir responsabilidade e buscar protagonismo nas decisões.</p>
+        </article>
+
+        <article class="feature-card">
+          <h2>🧠 Estratégia</h2>
+          <p>Leitura de jogo, adaptação e posicionamento são tão importantes quanto força e velocidade.</p>
+        </article>
+
+        <article class="feature-card">
+          <h2>🔥 Evolução</h2>
+          <p>Cada confronto obriga os personagens a superar limites e aprimorar suas principais armas.</p>
+        </article>
+      </div>
+
+      <h2>Um futebol tratado como batalha</h2>
+      <p>
+        Cada personagem possui um estilo único: velocidade, drible, força, inteligência,
+        controle de bola ou finalização. Isso faz com que as partidas pareçam confrontos
+        entre habilidades especiais.
+      </p>
+
+      <p>
+        O objetivo do projeto Blue Lock é criar o melhor atacante do mundo. Para isso,
+        os jogadores precisam desenvolver suas habilidades, seu ego e sua capacidade
+        de marcar gols em momentos decisivos.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Site educativo sobre Blue Lock • Projeto em HTML e CSS</p>
+  </footer>
 </body>
 </html>
-<!-- nova publicação dwwo GitHub Pages -->
+
+<section class="content-card creditos">
+    <div class="page-heading">
+        <h1>Créditos</h1>
+        <p>Informações sobre a criação deste projeto.</p>
+    </div>
+
+    <div class="creditos-box">
+        <h2>Desenvolvimento</h2>
+        <p><strong>Gabryel Garcia</strong></p>
+
+        <h2>Projeto</h2>
+        <p>Site desenvolvido sobre o anime Blue Lock.</p>
+
+        <h2>Conteúdo</h2>
+        <p>História, personagens e habilidades de Blue Lock.
+          Esse site foi criado para os fãs que gostam de anime e expecificamente para os que gostam do anime de Blue Lock.
+
+        <h2>Agradecimentos</h2>
+        <p>
+            Obrigado a todos que visitaram e acompanharam este projeto.
+        </p>
+    </div>
+</section>

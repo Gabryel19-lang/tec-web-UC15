@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" aria-labelledby="logoTitle logoDesc" role="img">
+  <title id="logoTitle">Blue Lock</title>
+  <desc id="logoDesc">Logotipo estilo neon/anime: marca 'BLUE LOCK' com emblema circular e brilho ciano.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#001018" />
+      <stop offset="100%" stop-color="#031329" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0" x2="1">
+      <stop offset="0%" stop-color="#00d9ff"/>
+      <stop offset="100%" stop-color="#77edff"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feOffset dx="0" dy="8" result="off"/>
+      <feGaussianBlur in="off" stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .wordmark { font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif; font-weight: 900; letter-spacing: 6px; }
+    </style>
+  </defs>
+
+  <!-- background (transparent) -->
+  <rect width="1200" height="360" fill="none"/>
+
+  <!-- emblem (left) -->
+  <g transform="translate(80,60)">
+    <circle cx="100" cy="100" r="86" fill="#021226" />
+    <circle cx="100" cy="100" r="60" fill="url(#cyanGrad)" opacity="0.12" filter="url(#neonGlow)" />
+    <circle cx="100" cy="100" r="46" fill="#001018" stroke="#00d9ff" stroke-width="3" filter="url(#neonGlow)" />
+
+    <!-- stylized lock/shield motif -->
+    <path d="M100 60 C118 60, 130 78, 130 100 L130 118 C130 140, 118 158, 100 158 L100 158 C82 158, 70 140, 70 118 L70 100 C70 78, 82 60, 100 60 Z" fill="#001018" stroke="#7de9ff" stroke-width="2" opacity="0.95" filter="url(#neonGlow)" />
+    <rect x="92" y="96" width="16" height="20" rx="4" fill="#00d9ff" opacity="0.95" filter="url(#neonGlow)" />
+
+    <!-- small star sparkle -->
+    <g fill="#7de9ff" transform="translate(160, -20) scale(0.7)">
+      <path d="M2 8 L6 10 L8 6 L10 10 L14 8 L10 12 L12 16 L8 14 L4 16 L6 12 Z" opacity="0.95"/>
+    </g>
+  </g>
+
+  <!-- wordmark -->
+  <g transform="translate(300,200)" filter="url(#softShadow)">
+    <text class="wordmark" x="0" y="0" font-size="96" fill="#e8f4ff">BLUE</text>
+    <text class="wordmark" x="320" y="0" font-size="96" fill="url(#cyanGrad)" style="letter-spacing:10px; filter: none;">
+      <tspan>LOCK</tspan>
+    </text>
+
+    <!-- neon stroke for LOCK -->
+    <text class="wordmark" x="320" y="0" font-size="96" fill="none" stroke="#00d9ff" stroke-width="4" stroke-linejoin="round" opacity="0.7" paint-order="stroke" filter="url(#neonGlow)">
+      <tspan>LOCK</tspan>
+    </text>
+
+    <!-- tagline small -->
+    <text x="0" y="56" font-family="Inter, Arial, sans-serif" font-size="18" fill="#a9bfd2">Anime • Futebol • Neon</text>
+  </g>
+
+</svg>
